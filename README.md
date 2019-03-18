@@ -1,1 +1,2 @@
-#Hexlet.ru project /n Brain Games
+# Hexlet.ru project
+## Brain Games

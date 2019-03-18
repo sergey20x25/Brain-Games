@@ -2,11 +2,15 @@
   "name": "sergey20x25-bg",
   "version": "1.0.0",
   "description": "Hexlet.ru project - Brain Games",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sergey20x25/project-lvl1-s462.git"
   },
+  "keywords": [
+    "braingames",
+    "game",
+    "hexlet.ru"
+  ],
   "author": "sergey20x25",
   "license": "ISC",
   "bugs": {

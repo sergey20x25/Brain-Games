@@ -1,0 +1,28 @@
+{
+  "name": "braingames",
+  "version": "1.0.0",
+  "description": "Hexlet.ru project - Brain Games",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergey20x25/project-lvl1-s462.git"
+  },
+  "author": "sergey20x25",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sergey20x25/project-lvl1-s462/issues"
+  },
+  "homepage": "https://github.com/sergey20x25/project-lvl1-s462#readme",
+  "bin": {
+    "braingames": "src/bin/brain-games.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4"
+  }
+}

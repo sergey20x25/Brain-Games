@@ -1,6 +1,6 @@
 {
   "name": "sergey20x25-bg",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Hexlet.ru project - Brain Games",
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
   "scripts": {
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build",
-    "start": "node dist/bin/brain-games.js"
+    "start": "node dist/bin/brain-even.js"
   },
   "dependencies": {
     "readline-sync": "^1.4.9"

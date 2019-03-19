@@ -19,10 +19,11 @@ const even = (playerName) => {
     const answer = readlineSync.question('Your answer: ');
     if (answer === rightAnswer) {
       console.log('Correct!');
-      return iter(count - 1);
+      iter(count - 1);
+    } else {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
+      console.log(`Let's try again, ${playerName}!`);
     }
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
-    console.log(`Let's try again, ${playerName}!`);
   };
   return iter(3);
 };

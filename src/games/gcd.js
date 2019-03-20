@@ -1,11 +1,14 @@
 import game from '../game';
+import randomInteger from '../utils';
+
+const description = 'Find the greatest common divisor of given numbers.';
 
 const gcd = (parameter) => {
-  if (parameter === 'gameRules') {
-    return { gameRules: 'Find the greatest common divisor of given numbers.' };
+  if (parameter === 'description') {
+    return { description };
   }
-  const num1 = Math.round(Math.random() * 99);
-  const num2 = Math.round(Math.random() * 99);
+  const num1 = randomInteger(0, 99);
+  const num2 = randomInteger(0, 99);
 
   const gcdFinder = (n, m) => {
     if (!m) {

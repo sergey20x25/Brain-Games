@@ -4,8 +4,7 @@ const numberOfSteps = 3;
 
 const game = (gameFunction) => {
   console.log('\nWelcome to the Brain Games!');
-  const rules = gameFunction('gameRules');
-  console.log(rules.gameRules);
+  console.log(gameFunction('description').description);
   const playerName = readlineSync.question('\nMay I have your name? ');
   console.log(`Hello, ${playerName}!\n`);
 

@@ -11,3 +11,6 @@ brain-even game:
 
 brain-calc game:
 [![asciicast](https://asciinema.org/a/235021.svg)](https://asciinema.org/a/235021)
+
+brain-gcd game:
+[![asciicast](https://asciinema.org/a/235094.svg)](https://asciinema.org/a/235094)

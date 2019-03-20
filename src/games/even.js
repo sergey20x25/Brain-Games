@@ -10,11 +10,11 @@ const even = (parameter) => {
   const isEven = n => n % 2 === 0;
   const question = randomInteger(0, 99);
   const rightAnswer = isEven(question) ? 'yes' : 'no';
-  const questionAndAnswer = {
+  const gameData = {
     question,
     rightAnswer,
   };
-  return questionAndAnswer;
+  return gameData;
 };
 
 export default () => game(even);

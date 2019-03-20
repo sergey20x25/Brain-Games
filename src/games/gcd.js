@@ -19,11 +19,11 @@ const gcd = (parameter) => {
 
   const question = `${num1} ${num2}`;
   const rightAnswer = String(gcdFinder(num1, num2));
-  const questionAndAnswer = {
+  const gameData = {
     question,
     rightAnswer,
   };
-  return questionAndAnswer;
+  return gameData;
 };
 
 export default () => game(gcd);

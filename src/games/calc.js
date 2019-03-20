@@ -1,40 +1,32 @@
 import game from '../game';
+import randomInteger from '../utils'
+
+const description = 'What is the result of the expression?';
+
+const operators = ['+', '-', '*'];
+const operations = [
+  (n, m) => n + m,
+  (n, m) => n - m,
+  (n, m) => n * m,
+];
 
 const calc = (parameter) => {
-  if (parameter === 'gameRules') {
-    return { gameRules: 'What is the result of the expression?' };
+  if (parameter === 'description') {
+    return { description };
   }
-  const num1 = Math.round(Math.random() * 99);
-  const num2 = Math.round(Math.random() * 99);
-  const randomOperationSelector = Math.round(Math.random() * 3);
-  let question;
-  let rightAnswer;
-  switch (randomOperationSelector) {
-    case 0:
-      // mul
-      question = `${num1} * ${num2}`;
-      rightAnswer = String(num1 * num2);
-      break;
+  const num1 = randomInteger(0, 99);
+  const num2 = randomInteger(0, 99);
+  const randomOperationSelector = randomInteger(0, 2);
 
-    case 1:
-      // sub
-      question = `${num1} - ${num2}`;
-      rightAnswer = String(num1 - num2);
-      break;
+  const question = `${num1} ${operators[randomOperationSelector]} ${num2}`;
+  const rightAnswer = String(operations[randomOperationSelector](num1, num2));
 
-    default:
-      // sum
-      question = `${num1} + ${num2}`;
-      rightAnswer = String(num1 + num2);
-      break;
-  }
-
-  const questionAndAnswer = {
+  const gameData = {
     question,
     rightAnswer,
   };
 
-  return questionAndAnswer;
+  return gameData;
 };
 
 export default () => game(calc);

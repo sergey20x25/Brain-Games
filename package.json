@@ -1,6 +1,6 @@
 {
   "name": "sergey20x25-bg",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Hexlet.ru project - Brain Games",
   "repository": {
     "type": "git",
@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/sergey20x25/project-lvl1-s462#readme",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
     "brain-calc": "dist/bin/brain-calc.js"
   },

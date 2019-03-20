@@ -1,3 +1,5 @@
+import game from '../game';
+
 const even = (parameter) => {
   if (parameter === 'gameRules') {
     return { gameRules: 'Answer "yes" if number even otherwise answer "no".' };
@@ -12,4 +14,4 @@ const even = (parameter) => {
   return questionAndAnswer;
 };
 
-export default even;
+export default () => game(even);

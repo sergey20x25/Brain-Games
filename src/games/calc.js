@@ -1,3 +1,5 @@
+import game from '../game';
+
 const calc = (parameter) => {
   if (parameter === 'gameRules') {
     return { gameRules: 'What is the result of the expression?' };
@@ -35,4 +37,4 @@ const calc = (parameter) => {
   return questionAndAnswer;
 };
 
-export default calc;
+export default () => game(calc);

@@ -3,10 +3,7 @@ import randomInteger from '../utils';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-const gcd = (parameter) => {
-  if (parameter === 'description') {
-    return { description };
-  }
+const gcd = () => {
   const num1 = randomInteger(0, 99);
   const num2 = randomInteger(0, 99);
 
@@ -26,4 +23,4 @@ const gcd = (parameter) => {
   return gameData;
 };
 
-export default () => game(gcd);
+export default () => game(gcd, description);

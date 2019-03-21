@@ -7,7 +7,7 @@ const isPrime = (number) => {
   if (number < 2) {
     return false;
   }
-  for (let i = 2; i < number; i += 1) {
+  for (let i = 2; i * i <= number; i += 1) {
     if (number % i === 0) {
       return false;
     }
@@ -15,10 +15,7 @@ const isPrime = (number) => {
   return true;
 };
 
-const prime = (parameter) => {
-  if (parameter === 'description') {
-    return { description };
-  }
+const prime = () => {
   const question = randomInteger(0, 99);
   const rightAnswer = isPrime(question) ? 'yes' : 'no';
   const gameData = {
@@ -28,4 +25,4 @@ const prime = (parameter) => {
   return gameData;
 };
 
-export default () => game(prime);
+export default () => game(prime, description);

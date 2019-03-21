@@ -3,8 +3,9 @@ import randomInteger from '../utils';
 
 const description = 'What number is missing in the progression?';
 
+const length = 10;
+
 const progressionGenerator = () => {
-  const length = 10;
   const start = randomInteger(0, 99);
   const difference = randomInteger(1, 9);
   const progression = [];
@@ -14,14 +15,11 @@ const progressionGenerator = () => {
   return progression;
 };
 
-const progressionGame = (parameter) => {
-  if (parameter === 'description') {
-    return { description };
-  }
+const progressionGame = () => {
   const gameProgression = progressionGenerator();
-  const elementSelector = randomInteger(0, gameProgression.length);
-  const rightAnswer = String(gameProgression[elementSelector]);
-  gameProgression[elementSelector] = '..';
+  const hiddenElement = randomInteger(0, length);
+  const rightAnswer = String(gameProgression[hiddenElement]);
+  gameProgression[hiddenElement] = '..';
   const question = gameProgression.join(' ');
   const gameData = {
     question,
@@ -31,4 +29,4 @@ const progressionGame = (parameter) => {
   return gameData;
 };
 
-export default () => game(progressionGame);
+export default () => game(progressionGame, description);

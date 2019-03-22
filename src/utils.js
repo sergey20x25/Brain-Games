@@ -7,10 +7,10 @@ const isEven = n => n % 2 === 0;
 
 const generateProgression = (length) => {
   const start = randomInteger(0, 99);
-  const difference = randomInteger(1, 9);
+  const step = randomInteger(1, 9);
   const progression = [];
   for (let i = 0; i < length; i += 1) {
-    progression.push(start + difference * i);
+    progression.push(start + step * i);
   }
   return progression;
 };

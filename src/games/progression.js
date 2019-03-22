@@ -5,7 +5,7 @@ const description = 'What number is missing in the progression?';
 
 const length = 10;
 
-const generateProgressionData = (len) => {
+const generateProgression = (len) => {
   const start = randomInteger(0, 99);
   const step = randomInteger(1, 9);
   const progression = [];
@@ -15,8 +15,8 @@ const generateProgressionData = (len) => {
   return progression;
 };
 
-const progressionData = () => {
-  const gameProgression = generateProgressionData(length);
+const generateProgressionData = () => {
+  const gameProgression = generateProgression(length);
   const hiddenElementIndex = randomInteger(0, length - 1);
   const rightAnswer = String(gameProgression[hiddenElementIndex]);
   gameProgression[hiddenElementIndex] = '..';
@@ -29,4 +29,4 @@ const progressionData = () => {
   return gameData;
 };
 
-export default () => game(progressionData, description);
+export default () => game(generateProgressionData, description);

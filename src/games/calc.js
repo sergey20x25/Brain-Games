@@ -1,5 +1,5 @@
 import game from '../game';
-import randomInteger from '../utils';
+import { randomInteger } from '../utils';
 
 const description = 'What is the result of the expression?';
 

@@ -27,13 +27,19 @@ $ npm install -g sergey20x25-bg
 ```
 ![enter image description here](https://i.ibb.co/KXXmTP9/235014.gif)
 ## Launch
-To start the game enter the game name in the console
+To start write **brain-games** in the console:
+```sh
+$ brain-games
+```
 
-For example:
+or write the game name:
 ```sh
 $ brain-even
 ```
+
 ## Games examples
+### brain-games
+![brain-games](https://i.ibb.co/2Zyf540/235625.gif)
 ### brain-even
 ![brain-even](https://i.ibb.co/TqP0bY5/235019.gif)
 ### brain-calc

@@ -1,19 +1,7 @@
 import game from '../game';
-import randomInteger from '../utils';
+import { randomInteger, isPrime } from '../utils';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
-const isPrime = (number) => {
-  if (number < 2) {
-    return false;
-  }
-  for (let i = 2; i * i <= number; i += 1) {
-    if (number % i === 0) {
-      return false;
-    }
-  }
-  return true;
-};
 
 const prime = () => {
   const question = randomInteger(0, 99);

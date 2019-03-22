@@ -3,19 +3,20 @@ import randomInteger from '../utils';
 
 const description = 'What is the result of the expression?';
 
+const operations = {
+  '+': (n, m) => n + m,
+  '-': (n, m) => n - m,
+  '*': (n, m) => n * m,
+};
+
 const operators = ['+', '-', '*'];
-const operations = [
-  (n, m) => n + m,
-  (n, m) => n - m,
-  (n, m) => n * m,
-];
 
 const calc = () => {
   const num1 = randomInteger(0, 99);
   const num2 = randomInteger(0, 99);
-  const operator = randomInteger(0, 2);
-
-  const question = `${num1} ${operators[operator]} ${num2}`;
+  const operatorIndex = randomInteger(0, operators.length - 1);
+  const operator = operators[operatorIndex];
+  const question = `${num1} ${operator} ${num2}`;
   const rightAnswer = String(operations[operator](num1, num2));
 
   const gameData = {

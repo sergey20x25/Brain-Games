@@ -11,7 +11,7 @@ const operations = {
 
 const operators = ['+', '-', '*'];
 
-const calc = () => {
+const calcData = () => {
   const num1 = randomInteger(0, 99);
   const num2 = randomInteger(0, 99);
   const operatorIndex = randomInteger(0, operators.length - 1);
@@ -27,4 +27,4 @@ const calc = () => {
   return gameData;
 };
 
-export default () => game(calc, description);
+export default () => game(calcData, description);

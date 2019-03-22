@@ -3,7 +3,7 @@ import { randomInteger, isEven } from '../utils';
 
 const description = 'Answer "yes" if number even otherwise answer "no".';
 
-const even = () => {
+const evenData = () => {
   const question = randomInteger(0, 99);
   const rightAnswer = isEven(question) ? 'yes' : 'no';
   const gameData = {
@@ -13,4 +13,4 @@ const even = () => {
   return gameData;
 };
 
-export default () => game(even, description);
+export default () => game(evenData, description);

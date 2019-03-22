@@ -34,4 +34,6 @@ const isPrime = (number) => {
   return true;
 };
 
-export { randomInteger, isEven, generateProgression, findGcd, isPrime };
+export {
+  randomInteger, isEven, generateProgression, findGcd, isPrime,
+};

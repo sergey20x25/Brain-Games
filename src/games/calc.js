@@ -1,5 +1,5 @@
 import game from '../game';
-import { randomInteger } from '../utils';
+import randomInteger from '../utils';
 
 const description = 'What is the result of the expression?';
 
@@ -11,7 +11,7 @@ const operations = {
 
 const operators = ['+', '-', '*'];
 
-const calcData = () => {
+const generateCalcData = () => {
   const num1 = randomInteger(0, 99);
   const num2 = randomInteger(0, 99);
   const operatorIndex = randomInteger(0, operators.length - 1);
@@ -27,4 +27,4 @@ const calcData = () => {
   return gameData;
 };
 
-export default () => game(calcData, description);
+export default () => game(generateCalcData, description);

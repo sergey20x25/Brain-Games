@@ -1,9 +1,21 @@
 import game from '../game';
-import { randomInteger, isPrime } from '../utils';
+import randomInteger from '../utils';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const primeData = () => {
+const isPrime = (number) => {
+  if (number < 2) {
+    return false;
+  }
+  for (let i = 2; i <= Math.sqrt(number); i += 1) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
+
+const generatePrimeData = () => {
   const question = randomInteger(0, 99);
   const rightAnswer = isPrime(question) ? 'yes' : 'no';
   const gameData = {
@@ -13,4 +25,4 @@ const primeData = () => {
   return gameData;
 };
 
-export default () => game(primeData, description);
+export default () => game(generatePrimeData, description);
